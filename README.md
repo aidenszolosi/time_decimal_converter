@@ -8,6 +8,42 @@ This project consists of a Python script that provides functionality for convert
 - **Decimal to Time Conversion**: Converts decimal time format back into standard time format.
 - **Automated Testing**: A script to run the main script repeatedly and ensure the accuracy of conversions.
 
+## Using as Imported Libraries
+
+These scripts can also be used as imported libraries in other Python projects. This allows you to leverage the time-decimal conversion functionality within different Python applications.
+<details>
+<summary>More Information</summary>
+<br>
+
+
+### Importing the Libraries
+
+1. **Import `TimeToDec` from `main.py`:**
+   This function converts standard time format to decimal format.
+   ```python
+   from main import TimeToDec
+   from py2 import decToTime
+
+Using TimeToDec Function:
+
+```python
+timeInput = "09:30AM"
+decimalResult = TimeToDec(timeInput)
+print(f"Converted Decimal Time: {decimalResult}")
+```
+Using decToTime Function:
+
+```python
+decInput = "15.5"
+timeResult = decToTime(decInput)
+print(f"Converted Standard Time: {timeResult}")
+```
+You can integrate these functions in a scheduling application to convert event times into decimal format for easier calculation of durations, or in any application where time format conversion is needed.
+
+Ensure that the scripts are in your Python project's path or properly installed as packages if you have packaged them.
+The functions expect specific input formats (standard time format for TimeToDec and decimal format for decToTime), so validate inputs accordingly in your application.
+</details>
+
 ## How to Use
 
 1. **Running the Conversion:**
@@ -53,3 +89,5 @@ Adjust the script_path and num_runs in the testing script as needed.
 ### Notes
 Ensure the input format is correct for the conversions to work properly.
 The testing script is intended to validate the reliability of conversion functions.
+
+
